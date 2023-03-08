@@ -14,24 +14,24 @@ end
 RegisterCommand(Config.command, function(source,args,raw)
   if IsPlayerAceAllowed(source, Config.ace) then
     if SV_BLIP_USERS[source] then
-      TriggerClientEvent("knight-staffblips-lite:toggle", source, false)
-      print(source.." disabled staffblips.")
+      TriggerClientEvent("knight-playerblips-lite:toggle", source, false)
+      print(source.." disabled playerblips.")
       SV_BLIP_USERS[source] = nil
     else
-      TriggerClientEvent("knight-staffblips-lite:toggle", source, true)
-      print(source.." enabled staffblips.")
+      TriggerClientEvent("knight-playerblips-lite:toggle", source, true)
+      print(source.." enabled playerblips.")
       SV_BLIP_USERS[source] = true
     end
   else
-    TriggerClientEvent("knight-staffblips-lite:noperms", source)
-    print(source.." tried to use staffblips command without permission.")
+    TriggerClientEvent("knight-playerblips-lite:noperms", source)
+    print(source.." tried to use playerblips command without permission.")
   end
 end, false)
 
 
 function Transmit()
   for id,_ in pairs(SV_BLIP_USERS) do
-    TriggerClientEvent("knight-staffblips-lite:transmit", id, SV_BLIP_DATA)
+    TriggerClientEvent("knight-playerblips-lite:transmit", id, SV_BLIP_DATA)
   end
 end
 

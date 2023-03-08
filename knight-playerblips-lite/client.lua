@@ -3,7 +3,7 @@ CL_BLIP_SYNC_DATA = {};
 CL_BLIP_CACHE = {};
 
 
-RegisterNetEvent("knight-staffblips-lite:transmit", function(data)
+RegisterNetEvent("knight-playerblips-lite:transmit", function(data)
   CL_BLIP_SYNC_DATA = data;
   CL_UPDATE_ALL();
 end)
@@ -15,11 +15,11 @@ local function CL_NOTIFY(text)
   EndTextCommandThefeedPostTicker(true, true);
 end
 
-RegisterNetEvent("knight-staffblips-lite:noperms", function()
+RegisterNetEvent("knight-playerblips-lite:noperms", function()
   CL_NOTIFY("~r~Not allowed.")
 end)
 
-RegisterNetEvent("knight-staffblips-lite:toggle", function(state)
+RegisterNetEvent("knight-playerblips-lite:toggle", function(state)
   CL_BLIPS_ENABLED = state;
   if state then
     CL_NOTIFY("~g~Enabled ~w~player blips.");

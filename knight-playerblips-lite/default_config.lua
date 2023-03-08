@@ -9,7 +9,7 @@ Config = {} -- DO NOT TOUCH THIS LINE
 
 
 -- Set this value to the ACE permission you want to require for using the command.
-Config.ace = "staffblips"
+Config.ace = "playerblips"
 
 
 -- Set this value to the command that should be used in chat to toggle the blips.
