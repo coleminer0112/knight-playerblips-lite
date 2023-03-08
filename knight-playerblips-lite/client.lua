@@ -25,6 +25,7 @@ RegisterNetEvent("knight-playerblips-lite:toggle", function(state)
     CL_NOTIFY("~g~Enabled ~w~player blips.");
   else
     CL_NOTIFY("~r~Disabled ~w~player blips.");
+    CL_CLEAR_BLIPS()
   end
 end)
 
@@ -42,6 +43,13 @@ function CL_UPDATE_ALL()
         _removed = _removed + 1;
       end
     end
+  end
+end
+
+
+function CL_CLEAR_BLIPS()
+  for id,_ in pairs(CL_BLIP_CACHE) do
+    CL_REMOVE_BLIP(id)
   end
 end
 
