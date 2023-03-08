@@ -1,6 +1,7 @@
 # knight-playerblips-lite
 
-Visit my [store](https://knightdev.tebex.io) for more resources!
+![](https://i.imgur.com/0Pe9M3k.png)
+### \*\*\* Visit my [store](https://knightdev.tebex.io) for more resources! \*\*\*
 
 ## Description
 This is a simple, plug-and-play resource to provide server developers with a permission-based player blip system in FiveM.
@@ -18,3 +19,6 @@ Via the config, you can easily:
 1. Open config.lua and modify settings to meet your requirements
 1. Add `start knight-playerblips-lite` to your server.cfg
 1. Enjoy!
+
+## License
+This resource is available for free use within FiveM servers. Do not attempt to sell this resource or otherwise use it for personal/commercial profits. Do not claim this resource as your own, nor remove the credit to the author.
