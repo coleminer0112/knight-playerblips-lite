@@ -1,7 +1,7 @@
 fx_version "cerulean"
 game "gta5"
 author "Knight.#0001"
-version "1.1"
+version "1.3"
 description "Allows authorized users to see blips for players."
 
 client_scripts{
