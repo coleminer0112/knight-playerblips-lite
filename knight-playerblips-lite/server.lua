@@ -32,6 +32,7 @@ end, false)
 function Transmit()
   for id,_ in pairs(SV_BLIP_USERS) do
     TriggerClientEvent("knight-playerblips-lite:transmit", id, SV_BLIP_DATA)
+    Wait(0)
   end
 end
 
@@ -40,8 +41,9 @@ Citizen.CreateThread(function()
   while true do
     Wait(250)
     SV_BLIP_DATA = {}
-    Wait(0)
-    for _,id in pairs(GetPlayers()) do
+    Wait(1)
+    local players = GetPlayers()
+    for _,id in pairs(players) do
       if tonumber(id) < 65535 then
         local _ped = GetPlayerPed(id)
         local _xyz = GetEntityCoords(_ped)
@@ -49,8 +51,9 @@ Citizen.CreateThread(function()
         local _nam = GetPlayerName(id)
         SV_BLIP_DATA[id] = {_xyz.x,_xyz.y,_xyz.z,1,0,_hdg,_nam}
       end
+      Wait(0)
     end
-    Wait(0)
+    Wait(1)
     Transmit()
   end
 end)
